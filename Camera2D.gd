@@ -4,7 +4,7 @@ var player : Node2D
 export var easingSpeed : float = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player = $"../enititys/player"
+	player = $"../enitity/player"
 	position = player.position
 
 

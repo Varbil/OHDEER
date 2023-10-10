@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 var max_hp:=6
 var hp :=6 
 var cframe:=0 #curret frame
@@ -6,9 +6,7 @@ var cframe:=0 #curret frame
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$empty.position = $"../enititys/player".position
-	$movinge.position= $"../enititys/player".position
-
+	pass
 
 func on_hit():
 	hp-=1

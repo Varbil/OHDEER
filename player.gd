@@ -48,4 +48,4 @@ func _check_bounce(delta):
 			raycast.force_raycast_update()
 			if raycast.is_colliding() && raycast.get_collision_normal() == Vector2.UP:
 				vel.y -= jumpForce
-				
+				$"../enitity/enemy1".position=Vector2(3000,3000)
