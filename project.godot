@@ -11,12 +11,9 @@ config_version=4
 [application]
 
 config/name="Oh Deer!"
-<<<<<<< HEAD
-run/main_scene="res://Main.tscn"
-=======
 run/main_scene="res://test.tscn"
->>>>>>> origin/Noah
-config/icon="res://icon.png"
+#<<<<<<<HEADrun/main_scene="res://Main.tscn"
+#>>>>>>>origin/Noahconfig/icon="res://icon.png"
 
 [gui]
 
