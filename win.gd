@@ -16,5 +16,5 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.name=="player":
-		$"../EndScene".hp=0
+		$"../CanvasLayer/ui".hp=0
 	pass # Replace with function body.

@@ -388,7 +388,7 @@ scale = Vector2( 2.05, 1.25 )
 position = Vector2( 29.25, 17 )
 scale = Vector2( 0.409091, 0.5 )
 frames = SubResource( 39 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="player" type="KinematicBody2D" parent="enitity"]
@@ -396,7 +396,6 @@ script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="enitity/player"]
 frames = SubResource( 54 )
-frame = 3
 playing = true
 flip_h = true
 
