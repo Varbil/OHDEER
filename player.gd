@@ -24,6 +24,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	
 	vel.x = 0
 	
 	if Input.is_action_pressed("ui_left"):
@@ -50,3 +51,9 @@ func _check_bounce(delta):
 				vel.y -= jumpForce
 				$"../enitity/enemy1".position=Vector2(3000,3000)
 
+
+
+func _on_Area2D_body_entered(body):
+	if body.name=="player":
+		$"../../EndScene".on_hit()
+	pass # Replace with function body.
