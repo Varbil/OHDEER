@@ -9,6 +9,8 @@ var score : int = 0
 
 var hp = 3
 
+onready var bounce_raycast = $BounceRaycast
+
 var speed : int = 200
 var jumpForce : int = 600
 var gravity : int = 800
@@ -26,11 +28,9 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_left"):
 		vel.x -= speed
-		$AnimatedSprite.flip_h=true
 		
 	if Input.is_action_pressed("ui_right"):
 		vel.x += speed
-		$AnimatedSprite.flip_h=false
 	
 	vel = move_and_slide(vel, Vector2.UP)
 	
@@ -39,4 +39,13 @@ func _physics_process(delta):
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		vel.y -= jumpForce
 	
+	_check_bounce(delta)
 	
+func _check_bounce(delta):
+	if vel.y > 0:
+		for raycast in bounce_raycast.get_children():
+			raycast.cast_to = Vector2.DOWN * vel * delta
+			raycast.force_raycast_update()
+			if raycast.is_colliding() && raycast.get_collision_normal() == Vector2.UP:
+				vel.y -= jumpForce
+				
