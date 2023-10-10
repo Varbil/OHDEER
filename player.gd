@@ -22,7 +22,10 @@ var grounded : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
+func _process(delta):
+	if position.x + 32  > $"../enemy1".position.x && position.x < $"../enemy1".position.x + 32 && position.y + 32 > $"../enemy1".position.y && position.y< $"../enemy1".position.y + 20:
+		$"../../CanvasLayer/ui".on_hit
+		
 func _physics_process(delta):
 	
 	vel.x = 0
