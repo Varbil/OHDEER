@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 export (int) var walk_speed = 50
-export (int) var gravity = 2000
+export (int) var gravity = 4000
 onready var visibility =$VisibilityNotifier2D
 
 var velocity := Vector2.ZERO
