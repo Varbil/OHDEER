@@ -13,6 +13,9 @@ func on_hit():
 	cframe+=1
 	$movinge.frame=cframe
 	print("-1")
+	if hp<=0:
+		hp=0
+		print("hp under 0")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func on_heal():
 	hp+=1

@@ -23,18 +23,22 @@ var grounded : bool = false
 func _ready():
 	pass # Replace with function body.
 func _process(delta):
-	if position.x + 32  > $"../enemy1".position.x && position.x < $"../enemy1".position.x + 32 && position.y + 32 > $"../enemy1".position.y && position.y< $"../enemy1".position.y + 20:
-		$"../../CanvasLayer/ui".on_hit
+	if position.x + 40  > $"../enemy1".position.x && position.x < $"../enemy1".position.x + 40 && position.y + 40 > $"../enemy1".position.y && position.y< $"../enemy1".position.y + 40:
+		$"../../CanvasLayer/ui".on_hit()
 		
+
+	delta=delta
 func _physics_process(delta):
 	
 	vel.x = 0
 	
 	if Input.is_action_pressed("ui_left"):
 		vel.x -= speed
+		$AnimatedSprite.flip_h=false
 		
 	if Input.is_action_pressed("ui_right"):
 		vel.x += speed
+		$AnimatedSprite.flip_h=true
 	
 	vel = move_and_slide(vel, Vector2.UP)
 	
