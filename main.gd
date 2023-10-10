@@ -16,3 +16,9 @@ func _physics_process(delta):
 		velocity = move_and_slide(velocity, Vector2.UP)
 		if is_on_wall():
 			x_direction = -x_direction
+
+
+#func _on_TopChecker_body_entered(body):
+	#walk_speed = 0
+	#set_collision_layer_bit(1,false)
+	#set_collision_mask_bit(1,false)
