@@ -10,7 +10,7 @@ var score : int = 0
 var hp = 3
 
 var speed : int = 200
-var jumpForce : int = 600
+var jumpForce : int = 400
 var gravity : int = 800
 
 var vel : Vector2 = Vector2()
