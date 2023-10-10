@@ -6,13 +6,13 @@ var cframe:=0 #curret frame
 
 
 func _ready():
-	$"../GameOver".visible=false
 	pass
 	
 func _process(delta):
 	if hp==0:
-		$"../GameOver".visible=true
-		delta=delta
+		$"../Gameover".z_index+=30000
+	
+	delta=delta
 
 func on_hit():
 	hp-=1
