@@ -16,5 +16,5 @@ func _ready():
 
 func _on_Area2D_body_entered(body):
 	if body.name=="player":
-		$"../CanvasLayer/ui".hp=0
+		get_tree().change_scene("You_win.tscn")
 	pass # Replace with function body.
